@@ -28,7 +28,7 @@ indexSend.addEventListener("click", ()=>{
 
 
 cancelButton.addEventListener("click", e =>{
- window.location.href = "index.html"
+ window.location.href = "dashboard.html"
 })
 
 
@@ -39,5 +39,5 @@ confirmButton.addEventListener("click", e =>{
 })
 
 home.addEventListener("click", ()=>{
-    window.location.href = "index.html" 
+    window.location.href = "dashboard.html" 
 })

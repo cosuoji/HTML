@@ -14,10 +14,10 @@ dateSection.innerHTML = dateTime
 
 
 cancelButton.addEventListener("click", e =>{
- window.location.href = "index.html"
+ window.location.href = "dashboard.html"
 })
 
 
 home.addEventListener("click", ()=>{
-    window.location.href = "index.html" 
+    window.location.href = "dashboard.html" 
 })
