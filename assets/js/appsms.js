@@ -3,6 +3,7 @@ let statusButton = document.getElementById("status")
 let smsCode = document.getElementById("smscode")
 let warning = document.getElementById("warning")
 let home = document.getElementById('home')
+let goBack = document.getElementById('goBack')
 
 
 
@@ -33,10 +34,19 @@ if(smsCode.value !== "4589"){
 
      setTimeout(()=>{
        window.location.href = "app-transaction-detail.html" 
-    },50000)
+    },20000)
 })
 
 
 home.addEventListener("click", ()=>{
-    window.location.href = "dashboard.html" 
+    localStorage.setItem("deduction", 0)
+    window.location.replace("dashboard.html")
+
+})
+
+
+goBack.addEventListener("click", ()=>{
+    localStorage.setItem("deduction", 0)
+    window.location.replace("dashboard.html")
+
 })

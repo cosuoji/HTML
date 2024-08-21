@@ -50,7 +50,7 @@
                 <div class="balance">
                     <div class="left">
                         <span class="title">Total Balance</span>
-                        <h1 class="total">$ 562.50</h1>
+                        <span>$</span><h1 class="total" id="total">150,062.59</h1>
                     </div>
                 </div>
                 <!-- * Balance -->
@@ -94,7 +94,7 @@
                                         <label class="label" for="bankName">To</label>
                                         <input type="text" class="form-control" id="bankName"
                                             placeholder="Bank Name">
-                                        <i class="clear-input">
+                                        <i class="clear-input" required>
                                             <ion-icon name="close-circle"></ion-icon>
                                         </i>
                                     </div>
@@ -103,7 +103,7 @@
                                 <div class="form-group basic">
                                     <div class="input-wrapper">
                                         <label class="label" for="accountNumber">To</label>
-                                        <input type="text" class="form-control" id="accountNumber" placeholder="Bank Account Number">
+                                        <input type="number" class="form-control" id="accountNumber" placeholder="Bank Account Number" required>
                                         <i class="clear-input">
                                             <ion-icon name="close-circle"></ion-icon>
                                         </i>
@@ -114,7 +114,7 @@
                                 <div class="form-group basic">
                                     <label class="label">Name of Recipient</label>
                                     <div class="input-group mb-2">
-                                        <input type="text" class="form-control" placeholder="Name of Recipient" id="recipient">
+                                        <input type="text" class="form-control" placeholder="Name of Recipient" id="recipient" required>
                                     </div>
                                 </div>
 
@@ -162,6 +162,7 @@
                                 You are sending <strong class="text-primary">$</strong><strong id="amountSection"
                                     class="text-primary"></strong> to <span id="nameSection"></span>. <br>Are you sure?
                             </p>
+                            <p id="warning" class="text-danger"></p>
                         </div>
                     </div>
                 

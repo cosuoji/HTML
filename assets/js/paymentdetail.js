@@ -12,6 +12,7 @@ let now = new Date()
 let dateTime = now.toLocaleString()
 dateSection.innerHTML = dateTime
 
+localStorage.setItem("transactions", 1)
 
 cancelButton.addEventListener("click", e =>{
  window.location.href = "dashboard.html"
