@@ -43,77 +43,163 @@
     <!-- App Capsule -->
     <div id="appCapsule">
 
-
-        <!-- Wallet -->
-        <div class="section full gradientSection">
-            <div class="in">
-                <h5 class="title mb-2">Current Balance</h5>
-                <h1 class="total" id="balance"></h1>
-                <h4 class="caption">
-                </h4>
-                <div class="wallet-inline-button mt-5">
-                    <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#depositActionSheet">
-                        <div class="iconbox">
-                            <ion-icon name="arrow-up-outline"></ion-icon>
-                        </div>
-                        <strong>Deposit</strong>
-                    </a>
-                    <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#withdrawActionSheet">
-                        <div class="iconbox">
-                            <ion-icon name="arrow-down-outline"></ion-icon>
-                        </div>
-                        <strong>Withdraw</strong>
-                    </a>
-                    <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#sendActionSheet">
-                        <div class="iconbox">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </div>
-                        <strong>Send</strong>
-                    </a>
-                </div>
+    <!-- Wallet -->
+    <div class="section full gradientSection">
+        <div class="in">
+            <h5 class="title mb-2">Current Balance</h5>
+            <h1 class="total">$ 2,562.50</h1>
+            <h4 class="caption">
+                <span class="iconbox text-success">
+                    <ion-icon name="trending-up-outline"></ion-icon>
+                </span>
+                0.053205 BTC
+            </h4>
+            <div class="wallet-inline-button mt-5">
+                <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#depositActionSheet">
+                    <div class="iconbox">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </div>
+                    <strong>Deposit</strong>
+                </a>
+                <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#withdrawActionSheet">
+                    <div class="iconbox">
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                    </div>
+                    <strong>Withdraw</strong>
+                </a>
+                <a href="#" class="item" data-bs-toggle="modal" data-bs-target="#sendActionSheet">
+                    <div class="iconbox">
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </div>
+                    <strong>Send</strong>
+                </a>
+                <a href="crypto-exchange.html" class="item">
+                    <div class="iconbox">
+                        <ion-icon name="swap-vertical-outline"></ion-icon>
+                    </div>
+                    <strong>Exchange</strong>
+                </a>
             </div>
         </div>
-        <!-- * Wallet -->
-
-<!-- Watchlist -->
-<div class="section-heading padding mt-4">
-    <h2 class="title">Watchlist</h2>
-</div>
-<!-- carousel  -->
-<div>
-    <div class="splide__track">
-        <ul class="splide__list">
-            <!-- item -->
-            <li class="splide__slide">
-                <div class="card coinbox">
-                    <div class="card-body pb-0">
-                        <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
-                           
-                        </a>
-                        <h4>BTC/USD</h4>
-                        <div class="text" id="btcAmount"></div>
-                        <div class="change">
-                            <span id="percentageSection" class="badge">
-                                <ion-icon name="arrow-up-outline"></ion-icon>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="chart chart-sparkline-success-1"></div>
-                </div>
-            </li>
-            <!-- * item -->
-            <!-- item -->
-            <!-- item -->
-            <!-- * item -->
-            <!-- item -->
-            <!-- * item -->
-            <!-- item -->
-            <!-- * item -->
-        </ul>
     </div>
-</div>
-<!-- * carousel  -->
-<!-- Watchlist -->
+    <!-- * Wallet -->
+
+
+    <!-- Watchlist -->
+    <div class="section-heading padding mt-4">
+        <h2 class="title">Watchlist</h2>
+        <a href="#" class="link">View All</a>
+    </div>
+    <!-- carousel  -->
+    <div class="carousel-multiple splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <!-- item -->
+                <li class="splide__slide">
+                    <div class="card coinbox">
+                        <div class="card-body pb-0">
+                            <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </a>
+                            <h4>BTC/USD</h4>
+                            <div class="text">$38,509.44</div>
+                            <div class="change">
+                                <span class="badge badge-success">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    6.78%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart chart-sparkline-success-1"></div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li class="splide__slide">
+                    <div class="card coinbox">
+                        <div class="card-body pb-0">
+                            <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </a>
+                            <h4>ETH/USD</h4>
+                            <div class="text">$1,462.61</div>
+                            <div class="change">
+                                <span class="badge badge-danger">
+                                    <ion-icon name="arrow-down-outline"></ion-icon>
+                                    2.54%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart chart-sparkline-danger-1"></div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li class="splide__slide">
+                    <div class="card coinbox">
+                        <div class="card-body pb-0">
+                            <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </a>
+                            <h4>USDT/USD</h4>
+                            <div class="text">$0.99995</div>
+                            <div class="change">
+                                <span class="badge badge-success">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    0.05%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart chart-sparkline-success-2"></div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li class="splide__slide">
+                    <div class="card coinbox">
+                        <div class="card-body pb-0">
+                            <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </a>
+                            <h4>DOGE/USD</h4>
+                            <div class="text">$0.198410</div>
+                            <div class="change">
+                                <span class="badge badge-success">
+                                    <ion-icon name="arrow-up-outline"></ion-icon>
+                                    1.73%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart chart-sparkline-success-1"></div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li class="splide__slide">
+                    <div class="card coinbox">
+                        <div class="card-body pb-0">
+                            <a href="#" class="fixed-button" data-bs-toggle="modal" data-bs-target="#actionSheetWatchlist">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </a>
+                            <h4>ADA/USD</h4>
+                            <div class="text">$1.271472</div>
+                            <div class="change">
+                                <span class="badge badge-danger">
+                                    <ion-icon name="arrow-down-outline"></ion-icon>
+                                    0.69%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart chart-sparkline-danger-2"></div>
+                    </div>
+                </li>
+                <!-- * item -->
+            </ul>
+        </div>
+    </div>
+    <!-- * carousel  -->
+    <!-- Watchlist -->
+
         <!-- Deposit Action Sheet -->
         <div class="modal fade action-sheet" id="depositActionSheet" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -291,61 +377,217 @@
         <!-- * Send Action Sheet-->
 
 
-        <!-- Portfolio -->
+    <!-- Portfolio -->
+    <div class="section mt-4">
+        <div class="section-heading">
+            <h2 class="title">My Portfolio</h2>
+            <a href="crypto-portfolio.html" class="link">View All</a>
+        </div>
+        <div class="card">
+            <ul class="listview flush transparent no-line image-listview detailed-list mt-1 mb-1">
+                <!-- item -->
+                <li>
+                    <div class="item">
+                        <div class="icon-box text-success">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>
+                                <strong>Bitcoin</strong>
+                                <div class="text-small text-secondary">0.053201 BTC</div>
+                            </div>
+                            <div class="text-end">
+                                <strong>$5,503.30</strong>
+                                <div class="text-small">
+                                    <span class="badge badge-success">
+                                        <ion-icon name="arrow-up-outline"></ion-icon>
+                                        2.59%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li>
+                    <div class="item">
+                        <div class="icon-box text-success">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>
+                                <strong>Ethereum</strong>
+                                <div class="text-small text-secondary">45.5469 ETH</div>
+                            </div>
+                            <div class="text-end">
+                                <strong>$1,246.47</strong>
+                                <div class="text-small">
+                                    <span class="badge badge-success">
+                                        <ion-icon name="arrow-up-outline"></ion-icon>
+                                        2.59%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li>
+                    <div class="item">
+                        <div class="icon-box text-danger">
+                            <ion-icon name="trending-down-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>
+                                <strong>Cardano</strong>
+                                <div class="text-small text-secondary">251.48 ADA</div>
+                            </div>
+                            <div class="text-end">
+                                <strong>$316.50</strong>
+                                <div class="text-small">
+                                    <span class="badge badge-danger">
+                                        <ion-icon name="arrow-down-outline"></ion-icon>
+                                        2.59%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- * item -->
+                <!-- item -->
+                <li>
+                    <div class="item">
+                        <div class="icon-box text-success">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                            <div>
+                                <strong>Tether</strong>
+                                <div class="text-small text-secondary">45.5469 USDT</div>
+                            </div>
+                            <div class="text-end">
+                                <strong>$45.54</strong>
+                                <div class="text-small">
+                                    <span class="badge badge-success">
+                                        <ion-icon name="arrow-up-outline"></ion-icon>
+                                        2.59%
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- * item -->
+            </ul>
+        </div>
+    </div>
+    <!-- Portfolio -->
+
+        <!-- Transactions -->
         <div class="section mt-4">
             <div class="section-heading">
-                <h2 class="title">My Portfolio</h2>
+                <h2 class="title">Transactions</h2>
+                <a href="crypto-transactions.html" class="link">View All</a>
             </div>
             <div class="card">
                 <ul class="listview flush transparent no-line image-listview detailed-list mt-1 mb-1">
                     <!-- item -->
                     <li>
-                        <div class="item">
+                        <a href="#" class="item">
+                            <div class="icon-box bg-success">
+                                <ion-icon name="arrow-up-outline"></ion-icon>
+                            </div>
                             <div class="in">
                                 <div>
                                     <strong>Bitcoin</strong>
-                                    <div class="text-small text-secondary" id="bitcoinSubtext"></div>
+                                    <div class="text-small text-secondary">Sell</div>
                                 </div>
                                 <div class="text-end">
-                                    <strong id="bitcoin"></strong>
+                                    <strong>$855,24</strong>
                                     <div class="text-small">
+                                        Today 11:38 AM
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <!-- * item -->
                     <!-- item -->
-                    <!-- * item -->
-                    <!-- item -->
-                    <!-- * item -->
-                    <!-- item -->
                     <li>
-                        <div class="item">
+                        <a href="#" class="item">
+                            <div class="icon-box bg-warning">
+                                <ion-icon name="arrow-down-outline"></ion-icon>
+                            </div>
                             <div class="in">
                                 <div>
-                                    <strong>Tether</strong>
-                                    <div id="tetherSubtext" class="text-small text-secondary"></div>
+                                    <strong>Etherium</strong>
+                                    <div class="text-small text-secondary">Buy</div>
                                 </div>
                                 <div class="text-end">
-                                    <strong id="tether"></strong>
-                                        </span>
+                                    <strong>$40,68</strong>
+                                    <div class="text-small">
+                                        March 8, 2021
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
+                    </li>
+                    <!-- * item -->
+                    <!-- item -->
+                    <li>
+                        <a href="#" class="item">
+                            <div class="icon-box">
+                                <img src="assets/img/sample/avatar/avatar4.jpg" alt="image" class="imaged rounded w36">
+                            </div>
+                            <div class="in">
+                                <div>
+                                    <strong>Bitcoin</strong>
+                                    <div class="text-small text-secondary">Send</div>
+                                </div>
+                                <div class="text-end">
+                                    <strong>$100,00</strong>
+                                    <div class="text-small">
+                                        March 4, 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- * item -->
+                    <!-- item -->
+                    <li>
+                        <a href="#" class="item">
+                            <div class="icon-box bg-secondary">
+                                <ion-icon name="swap-vertical-outline"></ion-icon>
+                            </div>
+                            <div class="in">
+                                <div>
+                                    <strong>Tether</strong>
+                                    <div class="text-small text-secondary">Trade</div>
+                                </div>
+                                <div class="text-end">
+                                    <strong>$2.405,48</strong>
+                                    <div class="text-small">
+                                        February 24, 2021
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </li>
                     <!-- * item -->
                 </ul>
             </div>
         </div>
-        <!-- Portfolio -->
+        <!-- Transactions -->
 
 
         <!-- app footer -->
         <div class="appFooter">
             <div class="footer-title">
-                Copyright © Finapp 2024. All Rights Reserved.
+                Copyright © Finapp 2025. All Rights Reserved.
             </div>
         </div>
         <!-- * app footer -->
