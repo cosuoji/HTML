@@ -10,11 +10,25 @@
     <meta name="theme-color" content="#000000">
     <title>Finapp</title>
     <meta name="description" content="Finapp HTML Mobile Template">
-    <meta name="keywords" content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
+    <meta name="keywords"
+        content="bootstrap, wallet, banking, fintech mobile template, cordova, phonegap, mobile, html, responsive" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="manifest" href="__manifest.json">
+    <style>
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .terms-error {
+            color: #ff3b30;
+            font-size: 14px;
+            margin-top: 8px;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,15 +39,15 @@
     </div>
     <!-- * loader -->
 
-        <div class="appHeader no-border bg-primary transparent position-absolute">
-            <div class="left">
-            </div>
-            <div class="pageTitle">
-                <img src="assets/img/logo.png"  alt="logo" class="logo">
-            </div>
-            <div class="right">
-            </div>
+    <div class="appHeader no-border bg-primary transparent position-absolute">
+        <div class="left">
         </div>
+        <div class="pageTitle">
+            <img src="assets/img/logo.png" alt="logo" class="logo">
+        </div>
+        <div class="right">
+        </div>
+    </div>
 
     <!-- App Header -->
     <div class="appHeader no-border transparent position-absolute">
@@ -42,7 +56,7 @@
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </a>
         </div>
-        <div class="pageTitle" >
+        <div class="pageTitle">
             <img src="assets/img/logo.png" id="homepage" alt="logo" class="logo">
         </div>
         <div class="right">
@@ -61,7 +75,7 @@
             <h4>Create an account</h4>
         </div>
         <div class="section mb-5 p-2">
-            <form action="index.html">
+            <form action="index.html" id="registrationForm">
                 <div class="card">
                     <div class="card-body">
                         <div class="form-group basic">
@@ -98,21 +112,23 @@
 
                         <div class="custom-control custom-checkbox mt-2 mb-1">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="customCheckb1">
-                                <label class="form-check-label" for="customCheckb1">
+                                <input type="checkbox" class="form-check-input" id="termsCheckbox">
+                                <label class="form-check-label" for="termsCheckbox">
                                     I agree <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and
                                         conditions</a>
                                 </label>
+                            </div>
+                            <div id="termsError" class="terms-error">
+                                You must accept the terms and conditions to register
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-
-
                 <div class="form-button-group transparent">
-                    <button type="submit" class="btn btn-primary btn-block btn-lg">Register</button>
+                    <button type="submit" id="registerButton" class="btn btn-primary btn-block btn-lg"
+                        disabled>Register</button>
                 </div>
 
             </form>
@@ -132,26 +148,241 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum, urna eget finibus
-                        fermentum, velit metus maximus erat, nec sodales elit justo vitae sapien. Sed fermentum
-                        varius erat, et dictum lorem. Cras pulvinar vestibulum purus sed hendrerit. Praesent et
-                        auctor dolor. Ut sed ultrices justo. Fusce tortor erat, scelerisque sit amet diam rhoncus,
-                        cursus dictum lorem. Ut vitae arcu egestas, congue nulla at, gravida purus.
-                    </p>
-                    <p>
-                        Donec in justo urna. Fusce pretium quam sed viverra blandit. Vivamus a facilisis lectus.
-                        Nunc non aliquet nulla. Aenean arcu metus, dictum tincidunt lacinia quis, efficitur vitae
-                        dui. Integer id nisi sit amet leo rutrum placerat in ac tortor. Duis sed fermentum mi, ut
-                        vulputate ligula.
-                    </p>
-                    <p>
-                        Vivamus eget sodales elit, cursus scelerisque leo. Suspendisse lorem leo, sollicitudin
-                        egestas interdum sit amet, sollicitudin tristique ex. Class aptent taciti sociosqu ad litora
-                        torquent per conubia nostra, per inceptos himenaeos. Phasellus id ultricies eros. Praesent
-                        vulputate interdum dapibus. Duis varius faucibus metus, eget sagittis purus consectetur in.
-                        Praesent fringilla tristique sapien, et maximus tellus dapibus a. Quisque nec magna dapibus
-                        sapien iaculis consectetur. Fusce in vehicula arcu. Aliquam erat volutpat. Class aptent
-                        taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Terms and Conditions for Fin App
+                        Last Updated: -
+
+                        1. Agreement to Terms
+                        By accessing, signing up for, or using any account, product, or service offered by FinApp ("the
+                        Bank," "we," "us,"
+                        or "our"), you ("you," "your," the "customer," or "account holder") agree to be bound by these
+                        Terms and Conditions, our
+                        Privacy Policy, our Online Banking Agreement, our Fee Schedule, and any other applicable
+                        agreements (collectively, the
+                        "Agreements"). You should read all Agreements carefully.
+                        <br />
+                        <br />
+
+                        2. Definitions
+                        "Account" means any deposit, savings, checking, loan, or credit account you have with us.
+
+                        "Business Day" means Monday through Friday, excluding federal holidays. Transactions and
+                        processing may only occur on
+                        Business Days.
+
+                        "Online Banking" means our internet-based banking service.
+
+                        "Mobile Banking" means our application-based banking service for mobile devices.
+
+                        "PIN" means Personal Identification Number.
+
+                        "Password" means your secret code for accessing digital services.
+
+                        <br />
+                        <br />
+
+                        3. Account Opening and Eligibility
+                        You must be a legal resident of [Country] and at least 18 years of age (or the age of majority
+                        in your state) to open an
+                        account individually.
+
+                        To open an account, you must provide valid government-issued identification, taxpayer
+                        identification number (e.g., SSN),
+                        and other information we require.
+
+                        We may use third-party services to verify your identity and check your history, which may affect
+                        our decision to open
+                        your account.
+
+                        We reserve the right to decline any application for an account at our sole discretion.
+                        <br />
+                        <br />
+
+                        4. Account Ownership
+                        The ownership of your account (e.g., Individual, Joint Tenants, Tenants in Common, Trust,
+                        Business) is determined by
+                        your application and signature card. The signature card is part of this agreement and controls
+                        in case of a conflict
+                        with these Terms.
+
+                        <br />
+                        <br />
+
+                        5. Deposits
+                        Funds Availability: Our policy for the availability of deposited funds is detailed in our
+                        separate Funds Availability
+                        Policy. Generally, some funds from electronic direct deposits and cash deposits are available on
+                        the same business day.
+                        Checks may be subject to longer holds.
+
+                        Collection of Items: We act as your agent for collecting items (e.g., checks) for deposit. We
+                        are not liable for the
+                        negligence of another bank. Credit for a deposit is provisional until final settlement is
+                        received.
+
+                        Endorsements: You must endorse checks exactly as they are payable. We may accept checks endorsed
+                        by stamp or without
+                        endorsement if deposited to the named payee's account.
+
+                        Returned Deposits: If a deposited item is returned unpaid, we will debit your account for the
+                        amount, plus any
+                        associated fee.
+
+                        <br />
+                        <br />
+
+                        6. Withdrawals and Transfers
+                        You may withdraw funds up to the available balance in your account using methods we authorize
+                        (e.g., in person, ATM,
+                        debit card, electronic transfer).
+
+                        We may refuse a withdrawal if it would overdraw your account, unless you have an overdraft
+                        protection plan in place and
+                        in use.
+
+                        You agree to the rules and limits for transfers and withdrawals as outlined in our Account
+                        Disclosure and Fee Schedule.
+
+
+                        <br />
+                        <br />
+
+
+                        7. Fees and Charges
+                        You agree to pay all fees associated with your accounts as described in our current Fee
+                        Schedule.
+
+                        We may change our fees upon providing notice as required by law.
+
+                        We may deduct fees directly from your account balance.
+
+                        <br />
+                        <br />
+
+                        8. Overdrafts
+                        If you do not have sufficient available funds to cover a transaction, we may, at our discretion,
+                        pay the item and create
+                        an overdraft or return the item unpaid.
+
+                        In either case, you are responsible for any Overdraft Fee or Non-Sufficient Funds (NSF) Fee as
+                        stated in our Fee
+                        Schedule.
+
+                        You may opt-in to a formal Overdraft Protection Plan that links your account to another account
+                        or a line of credit.
+
+
+                        <br />
+                        <br />
+
+
+                        9. Statements
+                        Electronic Statements (e-Statements): You consent to receive periodic account statements
+                        electronically. You are
+                        responsible for accessing and reviewing your statements promptly.
+
+                        Paper Statements: If provided, paper statements will be mailed to the address of record.
+
+                        Reporting Errors: You must examine your statement with reasonable promptness. You must notify us
+                        immediately of any
+                        errors, forgeries, or unauthorized transactions. Your failure to notify us within 60 days of the
+                        statement being made
+                        available may limit your rights to dispute the transaction.
+
+                        <br />
+                        <br />
+
+
+
+                        10. Electronic Banking Services (Online & Mobile)
+                        Your use of our Online Banking, Mobile Banking, Bill Pay, and other electronic services is also
+                        governed by our separate
+                        Online Banking Agreement. You are responsible for the confidentiality of your login credentials,
+                        PINs, and Passwords.
+
+                        <br />
+                        <br />
+
+
+                        11. Debit/Credit Cards
+                        The use of any debit card, credit card, or ATM card issued by us is subject to the separate
+                        Cardholder Agreement
+                        provided with the card.
+
+                        <br />
+                        <br />
+
+                        12. Account Amendments
+                        We may change these Terms and Conditions, including fees and service charges, at any time. We
+                        will provide you with
+                        notice as required by law (typically 30 days in advance). Your continued use of the account
+                        after the effective date of
+                        the change constitutes your acceptance of the new terms.
+
+                        <br />
+                        <br />
+
+                        13. Account Termination
+                        By You: You may close your account at any time by requesting closure in writing or in a manner
+                        we authorize.
+
+                        By Us: We may close your account or terminate your banking privileges at any time, for any
+                        reason (or no reason), with
+                        or without prior notice, unless required by law. We will typically mail you a check for the
+                        final balance.
+
+                        <br />
+                        <br />
+
+
+                        14. Liability and Limitations
+                        Our Liability: We will not be liable for any indirect, special, or consequential damages arising
+                        from your use of our
+                        services or our failure to provide services, unless caused by our gross negligence or willful
+                        misconduct.
+
+                        Your Liability: You are responsible for any losses we incur due to your negligence, failure to
+                        report unauthorized
+                        transactions promptly, or failure to comply with these terms.
+
+                        <br />
+                        <br />
+
+                        15. Governing Law
+                        These Terms and Conditions shall be governed by and construed in accordance with the laws of the
+                        State of [Your State],
+                        and applicable federal law (e.g., Uniform Commercial Code, Electronic Fund Transfer Act).
+
+                        <br />
+                        <br />
+
+                        16. Communications
+                        You consent to receive communications from us electronically (e.g., email, text message, alerts
+                        through our app) and
+                        agree that all agreements, notices, and disclosures provided electronically satisfy any legal
+                        requirement that such
+                        communications be in writing.
+                        <br />
+                        <br />
+
+
+                        17. Severability
+                        If any provision of these Terms and Conditions is found to be unlawful or unenforceable, the
+                        remaining provisions will
+                        remain in full force and effect.
+
+                        <br />
+                        <br />
+
+                        18. Contact Information
+                        For questions about these Terms and Conditions, please contact us:
+
+                        Phone: [Bank Customer Service Phone Number]
+
+                        Email: [legal@bankname.com] (for formal notices)
+
+                        Mail: [Bank Name], Attn: Customer Service, [Bank Address]
+
+                        In Person: At any [Bank Name] branch
                     </p>
                 </div>
             </div>
@@ -170,7 +401,49 @@
     <!-- Base Js File -->
     <script src="assets/js/base.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the necessary elements
+            const termsCheckbox = document.getElementById('termsCheckbox');
+            const registerButton = document.getElementById('registerButton');
+            const termsError = document.getElementById('termsError');
+            const registrationForm = document.getElementById('registrationForm');
+
+            // Add event listener to the checkbox
+            termsCheckbox.addEventListener('change', function () {
+                if (this.checked) {
+                    registerButton.disabled = false;
+                    termsError.style.display = 'none';
+                } else {
+                    registerButton.disabled = true;
+                }
+            });
+
+            // Add form submission handler to prevent submission if terms aren't accepted
+            registrationForm.addEventListener('submit', function (e) {
+                if (!termsCheckbox.checked) {
+                    e.preventDefault();
+                    termsError.style.display = 'block';
+
+                    // Scroll to the terms checkbox to show the error
+                    termsCheckbox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+
+            // Optional: When the modal closes, check if the user might have read the terms
+            const termsModal = document.getElementById('termsModal');
+            if (termsModal) {
+                termsModal.addEventListener('hidden.bs.modal', function () {
+                    // If the user just viewed the terms, maybe they want to accept them now
+                    if (!termsCheckbox.checked) {
+                        termsCheckbox.focus();
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 
 </html>
+
